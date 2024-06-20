@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кабинет преподавателя</title>
+    <link rel="stylesheet" href="../styles/lecturer-cabinet.css" />
+    <script src="../JS/lecturer-cabinet.js" defer></script>
+    <script src="../JS/Check-existed-data.js" defer></script>
+  </head>
+  <body class="body">
+    <main class="main">
+      <aside class="aside">
+        <div class="lecturer-photo-holder"></div>
+        <span class="edit-holder">
+          <a href="lecturer-profile.html"
+            ><img
+              src="../images/lecture-cabinet/bx-edit.svg"
+              alt="Edit-profile"
+          /></a>
+        </span>
+        <span class="lecturer-name">Федькина Марина Анатольевна</span>
+
+        <button class="aside-menu-mutton">
+          <a href="lecturer/sign-upped-students.php" class="links-to-material"
+            >Зарегестрированные студенты</a
+          >
+        </button>
+        <button class="aside-menu-mutton" id="video">
+          <a href="lecturer/lecturer-upld-video.php" class="links-to-material"
+            >Видео</a
+          >
+        </button>
+        <button class="aside-menu-mutton" id="books">
+          <a href="lecturer/lecturer-upld-books.php" class="links-to-material"
+            >Книги</a
+          >
+        </button>
+        <button class="aside-menu-mutton" id="presentations">
+          <a
+            href="lecturer/lecturer-upld-presentations.php"
+            class="links-to-material"
+            >Презентации</a
+          >
+        </button>
+        <button class="aside-menu-mutton" id="links">
+          <a href="lecturer/lecturer-upld-links.php" class="links-to-material"
+            >Ссылки на материалы</a
+          >
+        </button>
+      </aside>
+      <!-- ___________________________________ upload-block _____method="POST"_________action="executers/upload-files.php"___enctype="multipart/form-data"__________________ -->
+      <div class="upload-block-wrapper">
+        <form id="upload-material-form">
+          <div class="upload-block-inner">
+            <div class="messagestyle upload-file-btn">
+              <span>Материал успешно выгружен</span>
+            </div>
+            <div class="shoose-selects-holder">
+              <select
+                name="Subject"
+                id="Subject-select"
+                class="upload-file-btn"
+              >
+                <option value="Графическое черчение" selected>
+                  Графическое черчение
+                </option>
+                <option value="Машиностроительное черчение">
+                  Машиностроительное черчение
+                </option>
+                <option value="Статика">Статика</option>
+                <option value="Сопротивление материалов">
+                  Сопротивление материалов
+                </option>
+                <option value="Детали машин">Детали машин</option>
+                <option value="Стандартизация">Стандартизация</option>
+                <option value="Мерология">Мерология</option>
+                <option value="Сертификация и качество продукции">
+                  Сертификация и качество продукции
+                </option>
+              </select>
+              <select
+                name="file-type"
+                id="file-type-select"
+                class="upload-file-btn"
+              >
+                <option value="video" selected>Видео</option>
+                <option value="books">Книга</option>
+                <option value="presentation">Презентация</option>
+                <option value="link">Ссылка</option>
+              </select>
+              <select
+                name="important-level"
+                id="important-level-select"
+                class="upload-file-btn"
+              >
+                <option value="1">Уровень 1</option>
+                <option value="2">Уровень 2</option>
+                <option value="3">Уровень 3</option>
+                <option value="4">Уровень 4</option>
+                <option value="5">Уровень 5</option>
+              </select>
+            </div>
+            <!-- _____________ upload-file-block ________________ -->
+            <div class="upload-file-block">
+              <div class="styled-input-file file-block-js-elem">
+                <button
+                  class="shoose-file upload-file-btn"
+                  id="shoose-file-btn"
+                >
+                  Выбрать файл
+                </button>
+                <label for="shoose-file-btn">Файл не выбран...</label>
+              </div>
+              <input
+                type="file"
+                class="upload-file file-block-js-elem"
+                name="file-to-upload"
+              />
+              <textarea
+                name="comment"
+                id="comment-area"
+                placeholder="Оставьте комментарий..."
+              ></textarea>
+              <!-- elements for link -->
+
+              <input
+                type="text"
+                placeholder="Введите имя ссылки"
+                class="link-input link-block-js-elem"
+                name="linkName"
+              />
+
+              <input
+                type="text"
+                placeholder="Введите ссылку"
+                class="link-input link-block-js-elem"
+                name="link"
+              />
+            </div>
+
+            <!-- _____________ upload-file-block ________________ -->
+            <input
+              type="submit"
+              class="upload-file-btn"
+              value="Выгрузить"
+              id="upload-file-btn"
+            />
+          </div>
+        </form>
+      </div>
+    </main>
+    <div class="spravka">
+      <a href="spravka/spravka.html" class="spravka-link">?</a>
+    </div>
+  </body>
+</html>

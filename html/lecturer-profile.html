@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профиль преподавателя</title>
+    <link
+      rel="stylesheet"
+      href="../styles/lecturer-profile/lecturer-profile.css"
+    />
+    <script src="../JS/toSaveChanges/toSaveChanges.js" defer></script>
+  </head>
+  <body class="body">
+    <header class="header">
+      <a href="lecturer-cabinet.html" class="get-back-btn"
+        ><img src="../images/log-ip-page/bx-arrow-back.svg" alt="back"
+      /></a>
+      <h2>Профиль преподавателя</h2>
+    </header>
+    <main class="main">
+      <form action="#" method="post">
+        <div class="profile-wrapper">
+          <div class="profile-inner" id="profile-inner-id">
+            <div class="image-holder">
+              <div class="image"></div>
+              <span>Фото профиля</span>
+            </div>
+            <div class="profile-data-holder lecturer-data-holder">
+              <div class="data-input-holder">
+                <span class="data-elem-title">Имя</span>
+                <input type="text" class="data-taker" id="lectName" />
+              </div>
+              <div class="data-input-holder">
+                <span class="data-elem-title">Пароль</span>
+                <input type="text" class="data-taker" id="lectPass" />
+              </div>
+              <div class="data-input-holder">
+                <span class="data-elem-title">Имейл</span>
+                <input type="text" class="data-taker" id="lectEmail" />
+              </div>
+              <div class="data-input-holder">
+                <span class="data-elem-title">Вопрос-подсказка</span>
+                <input type="text" class="data-taker" id="lectPassQuestion" />
+              </div>
+              <button class="saveChandeg" id="saveChandes">
+                Сохранить изменения
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+    <div class="spravka">
+      <a href="spravka/spravka.html" class="spravka-link">?</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+.body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #616161;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Google Sans", sans-serif;
+}
+
+.main {
+  height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #363636;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  margin: auto 0;
+}
+
+.links-container-wrapper {
+  margin: 60px 0;
+  width: 600px;
+  height: 380px;
+}
+
+.links-container-inner {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  height: 100%;
+  width: 100%;
+}
+
+.navig-elem {
+  background-color: #3f3f3f;
+  max-width: 300px;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.material-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  gap: 20px;
+  color: #000;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.material-link span {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.material-link img {
+  height: 40%;
+  width: 40%;
+}
+
+#last-child {
+  height: 190px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.get-back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+}
+
+.spravka {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #616161;
+  border: 1px solid #fff;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.spravka-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+}
+
+/* media requests*/
+
+@media (max-width: 540px) {
+  .links-container-inner {
+    grid-template-columns: 100%;
+  }
+
+  .navig-elem {
+    max-width: none;
+  }
+}
+
+@media (max-width: 853px) {
+  .header {
+    width: 100%;
+  }
+}

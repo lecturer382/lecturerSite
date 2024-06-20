@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вход/регистрация</title>
+    <link rel="stylesheet" href="../styles/log-up.css" />
+    <script
+      src="../JS/log-in-sign-up/register-request-to-server.js"
+      defer
+    ></script>
+    <script src="../JS/log-in-sign-up/log-in-sign-up.js" defer></script>
+    <script
+      src="../JS/log-in-sign-up/log-in-request-to-server.js"
+      defer
+    ></script>
+    <script src="../JS/log-in-sign-up/to-pass-user.js" defer></script>
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <div class="inner-content">
+        <h1 class="title-log-in">Вход в систему</h1>
+        <div class="input-container">
+          <!-- __________________________Первая форма__________________________ -->
+          <form
+            action="executers/log-in-user.php"
+            class="data-form"
+            method="post"
+            id="log-in-form"
+          >
+            <div class="around-line line-1 log-in-absense-email"></div>
+            <input
+              type="text"
+              name="log-in-email"
+              class="user-data-inpt"
+              placeholder="Введите ФИО"
+              id="log-in-name"
+              autocomplete="off"
+            />
+            <span class="hidden-warning" id="unpropriate-email"
+              >Неверное ФИО</span
+            >
+            <!-- Не введённый имейл -->
+            <img
+              src="../images/log-ip-page/bx-user.svg"
+              alt="user"
+              class="inpt-icon user-icon"
+            />
+            <div class="around-line line-2"></div>
+            <div class="around-line line-3"></div>
+            <input
+              type="password"
+              name="log-in-password"
+              class="user-data-inpt"
+              placeholder="Введите пароль"
+              id="log-in-password"
+              autocomplete="off"
+            />
+
+            <span class="hidden-warning" id="unpropriate-password"
+              >Неверный пароль</span
+            >
+            <span class="forgot-pass-text" id="forgot-pass-text"
+              >забыл(а) пароль</span
+            >
+
+            <img
+              src="../images/log-ip-page/bx-lock-alt.svg"
+              alt="password"
+              class="inpt-icon lock-icon"
+            />
+            <div class="around-line line-4"></div>
+            <input
+              type="button"
+              class="submit-btn form-button elem-padding"
+              value="Вход"
+              id="log-in-btn"
+            />
+          </form>
+          <!-- __________________________Первая форма конец__________________________ -->
+        </div>
+        <!-- _________executers\create-user.php_____________________ Sign up div ______________________________ -->
+        <form action="#" method="POST" class="data-form" id="sign-up-form">
+          <div class="sign-up">
+            <div class="get-up-sign-up">
+              <img src="../images/log-ip-page/bxs-up-arrow.svg" alt="" />
+            </div>
+            <h1 class="title-log-in">Регистрация в системе</h1>
+            <div class="input-container" id="input-container-holder">
+              <div class="around-line line-1"></div>
+              <input
+                type="text"
+                name="sign-up-user-name"
+                class="user-data-inpt"
+                placeholder="Введите ФИО"
+                id="sign-up-name"
+                autocomplete="off"
+              />
+              <span class="hidden-warning" id="sign-up-unpropriate-email"
+                >Неверно введены данные</span
+              >
+              <img
+                src="../images/log-ip-page/bx-user.svg"
+                alt="user"
+                class="inpt-icon user-icon"
+              />
+              <div class="around-line line-2"></div>
+
+              <div class="around-line line-3"></div>
+              <input
+                type="text"
+                name="sign-up-password"
+                class="user-data-inpt"
+                placeholder="Введите пароль"
+                id="sign-up-password"
+                autocomplete="off"
+              />
+              <span class="hidden-warning" id="sign-up-unpropriate-password"
+                >Неверный пароль</span
+              >
+              <img
+                src="../images/log-ip-page/bx-envelope.svg"
+                alt="password"
+                class="inpt-icon lock-icon"
+              />
+              <div class="around-line line-4"></div>
+
+              <div class="around-line line-5"></div>
+              <input
+                type="text"
+                name="user-group"
+                class="user-data-inpt"
+                placeholder="Введите вашу группу"
+                id="user-sign-up-group"
+                autocomplete="off"
+              />
+              <span class="hidden-warning" id="sign-up-unpropriate-group"
+                >Неверный формат</span
+              >
+              <img
+                src="../images/log-ip-page/bx-group.svg"
+                alt="password"
+                class="inpt-icon group-icon"
+              />
+              <div class="around-line line-6"></div>
+            </div>
+
+            <input
+              type="checkbox"
+              name="sign-up-lecturer-check"
+              id="im-a-lecturer"
+            />
+            <label class="check-label" for="im-a-lecturer"
+              >Я преподаватель</label
+            >
+
+            <div class="form-buttons-holder">
+              <input
+                type="button"
+                id="register"
+                name="sign-up-registrate"
+                class="submit-btn form-button elem-padding"
+                value="Зарегистрироваться"
+              />
+              <input
+                type="button"
+                id="cancel-register"
+                name="sign-up-registrate"
+                class="submit-btn form-button elem-padding"
+                value="Отмена"
+              />
+            </div>
+          </div>
+          <!-- ________________________________ Modal window for lecturer ________________________________ -->
+
+          <div class="modal-window-wrapper">
+            <div class="inner-modal-window">
+              <h1>Введите пароль</h1>
+              <input
+                type="password"
+                id="lecturer-password"
+                class="modal-window-inpt"
+                placeholder="Пароль"
+                name="lecturer-password"
+                autocomplete="off"
+              />
+              <div class="modal-btn-holder">
+                <input
+                  type="button"
+                  id="lecturer_submit-btn"
+                  name="lecturer_submit-btn"
+                  class="inn-modal-window-btn"
+                  value="OK"
+                />
+                <input
+                  type="button"
+                  id="cancel-submit-btn"
+                  name="cancel-submit-btn"
+                  class="inn-modal-window-btn"
+                  value="отмена"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
